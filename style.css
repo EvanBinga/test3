@@ -1,0 +1,57 @@
+/* style.css */
+.tree-node, .tree-leaf {
+    margin-left: 20px;
+    position: relative;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.tree-node::before, .tree-leaf::before {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #000;
+    transition: all 0.3s ease;
+}
+
+.tree-node:hover, .tree-leaf:hover {
+    transform: translateX(10px);
+}
+
+ul {
+    padding-left: 20px;
+    list-style-type: none; /* Убираем точки */
+
+}
+/* Основные стили для контейнера дерева */
+#tree {
+    background-color: #f0f0f0; /* Светлый фон для контейнера */
+    border-radius: 8px; /* Скругление углов */
+    padding: 20px; /* Отступы внутри контейнера */
+    max-width: 600px; /* Максимальная ширина контейнера */
+    margin: 20px auto; /* Выравнивание по центру и отступ сверху и снизу */
+}
+
+/* Стили для элементов списка, убираем стандартные маркеры списка */
+li{
+    list-style-type: none; /* Убираем точки */
+    padding-left: 20px; /* Небольшой отступ слева для подчеркивания иерархии */
+}
+
+/* Стили для узлов и листьев дерева */
+.tree-node, .tree-leaf {
+    padding: 5px 10px; /* Паддинги для элементов */
+    margin: 5px 0; /* Отступы между элементами */
+    border-radius: 4px; /* Скругление углов элементов */
+    transition: background-color 0.3s ease; /* Анимация изменения фона */
+    cursor: pointer; /* Курсор в виде указателя для интерактивности */
+}
+
+/* Стили при наведении для узлов и листьев */
+.tree-node:hover, .tree-leaf:hover {
+    background-color: #e0e0e0; /* Смена фона при наведении */
+}
